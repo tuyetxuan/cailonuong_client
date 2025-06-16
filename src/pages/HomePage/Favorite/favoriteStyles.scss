@@ -1,0 +1,25 @@
+.favorite--slider {
+  margin-top: 30px;
+
+  .slick-slider {
+    width: 100%;
+    position: relative;
+
+    .slick-list {
+      overflow: hidden !important;
+
+      .slick-track {
+        display: flex !important;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 10px 0;
+
+        .slick-slide {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}

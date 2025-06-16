@@ -1,0 +1,39 @@
+@layer utilities {
+    .animate-spin-slow {
+        animation: spin 30s linear infinite;
+    }
+}
+
+@layer components {
+    .ant-breadcrumb ol {
+        align-items: center;
+    }
+
+    .ant-breadcrumb a {
+        height: 0;
+    }
+
+    .ant-card-bordered .ant-card-cover {
+        overflow: hidden;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .ant-list {
+        overflow: hidden;
+    }
+
+    .ant-list .ant-list-header {
+        background-color: #45612D !important;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .ant-segmented-group {
+        gap: 5px !important;
+    }
+}

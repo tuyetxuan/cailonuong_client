@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@api/*": [
+        "src/api/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@configs/*": [
+        "src/configs/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@slice/*": [
+        "src/redux/slices/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
+      "@redux/*": [
+        "src/redux/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

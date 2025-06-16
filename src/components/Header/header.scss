@@ -1,0 +1,130 @@
+@use "../../styles/root" as root;
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  height: 110px;
+  font-weight: bold;
+
+  &__logo {
+    img {
+      height: 80px;
+    }
+  }
+}
+
+.nav {
+  flex: 1;
+  margin-left: 40px;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    position: relative;
+
+    a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 380;
+      letter-spacing: 1px;
+      padding: 10px 0;
+      display: inline-block;
+    }
+
+    &:hover > a,
+    &:has(.submenu:hover) > a {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+    }
+
+    a {
+      &.active {
+        color: #fff;
+        font-weight: 400;
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    &.has-submenu:hover .submenu {
+      display: block;
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: root.$bg-primary;  // Thêm namespace 'root.' trước biến
+  list-style: none;
+  display: none;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  li {
+    a {
+      display: block;
+      padding: 15px 20px;
+      color: #eee;
+      font-size: 14px;
+
+      &:hover {
+        background-color: root.$bg-primary-hover;  // Thêm namespace 'root.' trước biến
+        color: #fff;
+      }
+    }
+  }
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 8px;
+
+  input {
+    padding: 8px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+    color: #ffffff;
+    min-height: 38px;
+    &:focus {
+      border-color: root.$bg-white;  // Thêm namespace 'root.' trước biến
+      color: #fff;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    background-color: root.$bg-primary;  // Thêm namespace 'root.' trước biến
+    color: #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 1px solid  #cccccc;
+    &:hover {
+      border: 1px solid  root.$bg-orange;  // Thêm namespace 'root.' trước biến
+      background-color: root.$bg-orange;  // Thêm namespace 'root.' trước biến
+      color: #fff;
+    }
+  }
+}
+
+.header__login{
+  margin-left: 10px;
+  color: #cccccc;
+}
